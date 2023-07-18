@@ -1,0 +1,51 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  animation-name: gerakMasuk;
+  animation-duration: 3s;
+}
+
+@keyframes gerakMasuk {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(20px);
+    letter-spacing: 1px;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+/* Media Query */
+
+/* Laptop */
+@media (max-width: 992px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 65%;
+  }
+}
+
+/* Hp */
+@media (max-width: 576px) {
+  html {
+    font-size: 60%;
+  }
+}

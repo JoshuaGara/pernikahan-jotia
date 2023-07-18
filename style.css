@@ -1,0 +1,155 @@
+:root {
+  --darkOne: #000001;
+  --darkTwo: #45424b;
+  --lightOne: #919191;
+  --lightTwo: #ffffff;
+  --backgroundColor: #192e3a;
+  --buttonColor: #964b00;
+  --shadow: 0 2px 2px rgb(0 0 0 / 0.5);
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: "Work Sans", sans-serif;
+  /* min-height: 2000px; */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-image: url(images/hero-bg.jpg);
+  background-position: center;
+  z-index: -1;
+  filter: blur();
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+}
+
+.hero h1,
+.hero h4,
+.hero p {
+  text-shadow: var(--shadow);
+}
+
+.hero h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 5.5rem;
+}
+
+.hero h4 {
+  font-size: 1.6rem;
+}
+
+.hero p {
+  font-size: 1.6rem;
+}
+
+.hero a {
+  color: var(--buttonColor);
+  background-color: var(--lightTwo);
+  box-shadow: var(--shadow);
+}
+
+.hero a:hover {
+  background-color: var(--buttonColor);
+  color: var(--lightTwo);
+}
+
+/* Responsif Gerak Masuk */
+h4 {
+  animation-name: gerakMasukKiri;
+  animation-duration: 3s;
+}
+
+h1 {
+  animation-name: gerakMasukKanan;
+  animation-duration: 3s;
+}
+
+p {
+  animation-name: gerakMasukKiri;
+  animation-duration: 3s;
+}
+
+a {
+  animation-name: gerakMasukKiri;
+  animation-duration: 3s;
+}
+
+@keyframes gerakMasukKiri {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(20px);
+    letter-spacing: 1px;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes gerakMasukKanan {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-20px);
+    letter-spacing: 1px;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+/* Media Query */
+
+/* Laptop */
+@media (max-width: 992px) {
+  html {
+    font-size: 75%;
+  }
+
+  .simply-countdown > .simply-section {
+    padding: 40px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 65%;
+  }
+
+  .simply-countdown > .simply-section {
+    padding: 30px;
+    margin: 5px;
+  }
+}
+
+/* Hp */
+@media (max-width: 576px) {
+  html {
+    font-size: 60%;
+  }
+
+  .simply-countdown > .simply-section {
+    padding: 20px;
+    margin: 2px;
+  }
+}
